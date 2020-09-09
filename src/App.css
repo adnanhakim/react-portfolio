@@ -1,6 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 * {
    margin: 0;
-   font-family: 'Karla', sans-serif;
+   font-family: 'Poppins', sans-serif;
+}
+
+body {
+   --primary: #333647;
+   --secondary: #252734;
+   --accent: #fcc25b;
+   --text: #eaeaeb;
+   --light-text: #a7a5a5;
+   background-color: var(--secondary);
+   color: var(--text);
 }
