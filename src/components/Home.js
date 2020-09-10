@@ -41,12 +41,12 @@ function Home() {
                <img src={Picture1} alt="" />
             </div>
             <div className="home-right">
-               <div className="home-right-introduction">- introduction</div>
-               <div className="home-right-header">
+               <div className="header">- introduction</div>
+               <div className="title">
                   android developer and full stack web developer, based in
                   mumbai.
                </div>
-               <div className="home-right-text">
+               <div className="body">
                   lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Ducimus dolorum laborum vel assumenda quia commodi officia
                   illo facilis, corrupti blanditiis voluptas maiores amet?

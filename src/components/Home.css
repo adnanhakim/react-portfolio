@@ -22,7 +22,9 @@
    position: absolute;
    bottom: 0;
    right: 2rem;
-   height: 90%;
+   max-height: 90%;
+   height: auto;
+   width: auto;
    z-index: 0;
    filter: drop-shadow(5px 15px 10px rgba(0, 0, 0, 0.4));
    -webkit-filter: drop-shadow(5px 15px 10px rgba(0, 0, 0, 0, 4));
@@ -67,23 +69,4 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-}
-
-.home-right-introduction {
-   color: var(--light-text);
-   text-transform: uppercase;
-   letter-spacing: 0.13rem;
-   font-size: 0.875rem;
-}
-
-.home-right-header {
-   font-size: 1.475rem;
-   margin-top: 16px;
-   margin-bottom: 32px;
-   font-weight: 600;
-}
-
-.home-right-text {
-   color: var(--light-text);
-   font-size: 0.875rem;
 }

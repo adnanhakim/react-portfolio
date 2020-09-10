@@ -1,0 +1,29 @@
+.contact-container {
+   background-color: var(--secondary);
+   height: 70vh;
+}
+
+.contact {
+   max-width: 1100px;
+   padding-top: 7rem;
+   margin: auto;
+   display: grid;
+   grid-template-columns: 50% 50%;
+   background-color: var(--secondary);
+}
+
+.contact-left {
+   display: flex;
+   flex-direction: column;
+   padding-right: 7rem;
+   justify-content: flex-start;
+}
+
+.contact-right {
+   display: flex;
+   flex-direction: column;
+}
+
+.quotes {
+   font-size: 10rem;
+}
