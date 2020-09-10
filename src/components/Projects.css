@@ -1,0 +1,25 @@
+.projects-container {
+   position: relative;
+   background-color: var(--primary);
+   height: 70vh;
+}
+
+.projects {
+   max-width: 1100px;
+   padding-top: 14rem;
+   margin: auto;
+   display: grid;
+   grid-template-columns: 50% 50%;
+   background-color: var(--primary);
+}
+
+.skills {
+   position: absolute;
+   left: 0;
+   right: 0;
+   max-width: 1100px;
+   margin: auto;
+   display: flex;
+   margin-top: -150px;
+   justify-content: space-between;
+}

@@ -8,7 +8,9 @@
 body {
    --primary: #333647;
    --secondary: #252734;
+   --card: #434657;
    --accent: #fcc25b;
+   --dark-accent: #ffae29;
    --text: #eaeaeb;
    --light-text: #a7a5a5;
    background-color: var(--secondary);

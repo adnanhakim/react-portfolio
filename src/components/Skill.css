@@ -1,0 +1,25 @@
+.skill-container {
+   width: 25%;
+   height: 20rem;
+   background-color: var(--card);
+   cursor: pointer;
+   display: flex;
+   align-items: flex-end;
+}
+
+.skill-container:hover {
+   background-color: var(--dark-accent);
+}
+
+.skill-padding {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   margin: 2rem;
+   font-size: 1.42rem;
+}
+
+.skill-icon {
+   font-size: 2rem !important;
+   margin-right: 1rem;
+}
