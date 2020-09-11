@@ -1,7 +1,7 @@
 .projects-container {
    position: relative;
    background-color: var(--primary);
-   height: 70vh;
+   min-height: 70vh;
 }
 
 .skills {
@@ -34,4 +34,14 @@
    margin: 16px 16px;
    max-height: 50px;
    max-width: 150px;
+}
+
+.projects-list-container {
+   margin-top: 4rem;
+   column-count: 2;
+   column-gap: 5rem;
+}
+
+.projects-list-container > .button {
+   margin: 6rem 0px;
 }
