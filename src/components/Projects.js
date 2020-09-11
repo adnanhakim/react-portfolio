@@ -11,23 +11,34 @@ function Projects() {
 
    useEffect(() => {
       async function fetchLanguages() {
+         // Reference
          const languagesRef = db.collection('languages');
          const snapshot = await languagesRef.get();
+
          if (snapshot.empty) {
             console.log('No languages');
          } else {
             let languages = [];
+
+            // Store in array
             snapshot.forEach((doc) => {
                const data = doc.data();
-               languages.push({
-                  key: doc.id,
-                  name: data.name,
-                  url: data.url,
-               });
+               if (data.hide == null) {
+                  languages.push({
+                     key: doc.id,
+                     name: data.name,
+                     order: data.order,
+                     url: data.url,
+                  });
+               }
             });
+
+            // Sort by order
+            languages.sort((a, b) => a.order - b.order);
             setLanguages(languages);
          }
       }
+
       fetchLanguages();
    }, []);
 
