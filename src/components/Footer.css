@@ -46,18 +46,18 @@
    flex-direction: column;
 }
 
-.achievements-container:first-child {
+.achievements-container div:first-child {
    padding-top: 0px;
 }
 
-.achievements-container:last-child {
+.achievements-container div:last-child {
    border-bottom: none !important;
 }
 
 .achievement {
    display: flex;
    justify-content: space-between;
-   padding: 1.5rem 0px;
+   padding: 1rem 0px;
    border-bottom: 1px solid #979aa3;
 }
 
@@ -67,4 +67,28 @@
 
 .footer-bottom {
    padding-bottom: 5rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.footer-message {
+   font-size: 0.875rem;
+   margin: 1rem 0px 1.5rem 0px;
+}
+
+.footer-links {
+   z-index: 10;
+   display: flex;
+   width: 120px;
+   justify-content: space-between;
+}
+
+.footer-links a {
+   color: inherit;
+   text-decoration: inherit;
+}
+
+.footer-link {
+   cursor: pointer !important;
 }

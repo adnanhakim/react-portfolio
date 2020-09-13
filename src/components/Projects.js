@@ -5,8 +5,6 @@ import Project from './Project';
 import AndroidIcon from '@material-ui/icons/Android';
 import WebIcon from '@material-ui/icons/Web';
 import DesktopMacIcon from '@material-ui/icons/DesktopMac';
-import aos from 'aos';
-import 'aos/dist/aos.css';
 import { db } from '../firebase';
 
 function Projects() {
@@ -79,12 +77,6 @@ function Projects() {
       }
 
       fetchProjects();
-
-      // AOS
-      aos.init({
-         offset: 400,
-         duration: 1000,
-      });
    }, []);
 
    return (

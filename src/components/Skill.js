@@ -3,7 +3,10 @@ import './Skill.css';
 
 function Skill({ Icon, title }) {
    return (
-      <div className="skill-container">
+      <div
+         data-aos="zoom-out"
+         data-aos-offset="200"
+         className="skill-container">
          <div className="skill-padding">
             <Icon className="skill-icon" />
             {title}

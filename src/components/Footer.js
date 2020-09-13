@@ -1,8 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Footer.css';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import { db } from '../firebase';
 
 function Footer() {
+   const [achievements, setAchievements] = useState([]);
+
+   useEffect(() => {
+      async function fetchAchievements() {
+         const snapshot = await db.collection('achievements').get();
+
+         if (snapshot.empty) {
+            console.log('No achievements');
+         } else {
+            let achievements = [];
+
+            // Store in array
+            snapshot.forEach((doc) => {
+               const data = doc.data();
+               if (data.hide == null) {
+                  achievements.push({
+                     key: doc.id,
+                     name: data.name,
+                     order: data.order,
+                     link: data.link,
+                  });
+               }
+            });
+
+            // Sort by order
+            achievements.sort((a, b) => a.order - b.order);
+            setAchievements(achievements);
+         }
+      }
+
+      fetchAchievements();
+   }, []);
+
    return (
       <div className="footer-container">
          <div className="footer">
@@ -30,24 +67,47 @@ function Footer() {
                   <div className="header">- achievements</div>
                   <div className="title">some of my achievements</div>
                   <div className="achievements-container">
-                     <div className="achievement">
-                        <div className="achievement-name">
-                           Lorem ipsum dolor sit amet consectetur, adipisicing
-                           elit. Sit, odit veniam et praesentium velit officia
-                           assumenda consequatur provident eveniet rerum magni
-                           ad quod delectus quae ex, accusantium ratione dolorem
-                           veritatis?
+                     {achievements.map((achievement) => (
+                        <div className="achievement">
+                           <div className="achievement-name">
+                              {achievement.name}
+                           </div>
+                           <ArrowRightAltIcon className="button" />
                         </div>
-                        <ArrowRightAltIcon className="button" />
-                     </div>
-                     <div className="achievement">
-                        <div className="achievement-name">avishkar</div>
-                        <ArrowRightAltIcon className="button" />
-                     </div>
+                     ))}
                   </div>
                </div>
             </div>
-            <div className="footer-bottom">Bottom</div>
+            <div className="footer-bottom">
+               <div className="footer-logo"></div>
+               <div className="footer-message">
+                  Thanks for scrolling,
+                  <span className="light-text"> that's all folks.</span>
+               </div>
+               <div className="footer-links">
+                  <a
+                     href="https://www.instagram.com/ad.nxn/"
+                     title="Follow me on Instagram"
+                     target="_blank"
+                     rel="noopener noreferrer">
+                     <InstagramIcon className="footer-link" />
+                  </a>
+                  <a
+                     href="https://github.com/adnanhakim"
+                     title="See my projects on GitHub"
+                     target="_blank"
+                     rel="noopener noreferrer">
+                     <GitHubIcon className="footer-link" />
+                  </a>
+                  <a
+                     href="https://www.linkedin.com/in/adnanhakim/"
+                     title="Follow me on LinkedIn"
+                     target="_blank"
+                     rel="noopener noreferrer">
+                     <LinkedInIcon className="footer-link" />
+                  </a>
+               </div>
+            </div>
          </div>
       </div>
    );
