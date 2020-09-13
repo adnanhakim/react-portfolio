@@ -1,7 +1,7 @@
 import React from 'react';
 import './Contact.css';
 
-function Contact() {
+function Contact({ quote }) {
    return (
       <div className="contact-container">
          <div className="contact">
@@ -42,9 +42,7 @@ function Contact() {
                      />
                   </g>
                </svg>
-               <span className="title">
-                  Code is like humor. When you have to explain it, it’s bad.
-               </span>
+               <span className="title">{quote}</span>
             </div>
          </div>
       </div>

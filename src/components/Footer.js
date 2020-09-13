@@ -7,7 +7,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { Element } from 'react-scroll';
 import { db } from '../firebase';
 
-function Footer() {
+function Footer({ resume }) {
    const [achievements, setAchievements] = useState([]);
 
    useEffect(() => {
@@ -63,7 +63,10 @@ function Footer() {
                            send an email.
                         </a>
                         <span>&nbsp; or &nbsp;</span>
-                        <a href="mailto:adnanhakim007@gmail.com">
+                        <a
+                           href={resume}
+                           rel="noopener noreferrer"
+                           target="_blank">
                            check out my resume.
                         </a>
                      </div>

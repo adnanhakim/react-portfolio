@@ -3,9 +3,8 @@ import './Home.css';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import Picture1 from '../Picture2.png';
 
-function Home() {
+function Home({ homeTitle, homeBody, image }) {
    return (
       <div id="home" className="home-container section">
          <div className="home">
@@ -38,20 +37,12 @@ function Home() {
                      <LinkedInIcon className="home-left-link" />
                   </a>
                </div>
-               <img src={Picture1} alt="" />
+               <img src={image} alt="" />
             </div>
             <div className="home-right">
                <div className="header">- introduction</div>
-               <div className="title">
-                  android developer and full stack web developer, based in
-                  mumbai.
-               </div>
-               <div className="body">
-                  lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus dolorum laborum vel assumenda quia commodi officia
-                  illo facilis, corrupti blanditiis voluptas maiores amet?
-                  Voluptates perferendis maiores itaque quos eius ex.
-               </div>
+               <div className="title">{homeTitle}</div>
+               <div className="body">{homeBody}</div>
             </div>
          </div>
       </div>
