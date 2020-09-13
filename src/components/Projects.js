@@ -99,11 +99,15 @@ function Projects() {
          <div className="projects">
             <div className="languages">
                {languages.map((language) => (
-                  <img src={language.url} alt={language.name} />
+                  <img
+                     key={language.key}
+                     src={language.url}
+                     alt={language.name}
+                  />
                ))}
             </div>
             <Element name={'projects'}>
-               <div className="projects-list-container">
+               <div className="projects-list-container section">
                   <div className="header">- Projects</div>
                   <div className="title">selected projects.</div>
                   <div className="body">
@@ -118,6 +122,7 @@ function Projects() {
                   <div className="projects-list">
                      {projects.map((project) => (
                         <Project
+                           key={project.key}
                            title={project.title}
                            language={project.language}
                            image={project.url}

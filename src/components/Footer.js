@@ -43,7 +43,7 @@ function Footer() {
 
    return (
       <Element name="contact">
-         <div className="footer-container">
+         <div className="footer-container section">
             <div className="footer">
                <div className="footer-top">
                   <div className="footer-left">
@@ -73,7 +73,7 @@ function Footer() {
                      <div className="title">some of my achievements</div>
                      <div className="achievements-container">
                         {achievements.map((achievement) => (
-                           <div className="achievement">
+                           <div key={achievement.key} className="achievement">
                               <div className="achievement-name">
                                  {achievement.name}
                               </div>

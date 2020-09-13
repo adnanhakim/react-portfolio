@@ -22,7 +22,7 @@
    display: flex;
    justify-content: space-between;
    font-size: 1.475rem;
-   color: var(--light-text);
+   color: var(--text);
 }
 
 .navbar-links li {
@@ -31,19 +31,4 @@
    flex-direction: column;
    align-items: center;
    cursor: pointer;
-}
-
-.point {
-   background-color: inherit;
-   width: 8px;
-   height: 8px;
-   border-radius: 50%;
-}
-
-.selected {
-   color: var(--text);
-}
-
-.selected > div {
-   background-color: var(--accent);
 }
