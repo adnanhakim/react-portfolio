@@ -1,6 +1,7 @@
 .footer-container {
    background-color: var(--secondary);
    min-height: calc(100vh - 100px);
+   padding: 0px 50px;
 }
 
 .footer {

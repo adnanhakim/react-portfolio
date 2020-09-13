@@ -1,6 +1,7 @@
 .home-container {
    background-color: var(--primary);
    height: 70vh;
+   padding: 0px 50px;
 }
 
 .home {

@@ -1,6 +1,7 @@
 .contact-container {
    background-color: var(--secondary);
    height: 70vh;
+   padding: 0px 50px;
 }
 
 .contact {
