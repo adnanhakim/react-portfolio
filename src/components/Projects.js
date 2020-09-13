@@ -5,6 +5,7 @@ import Project from './Project';
 import AndroidIcon from '@material-ui/icons/Android';
 import WebIcon from '@material-ui/icons/Web';
 import DesktopMacIcon from '@material-ui/icons/DesktopMac';
+import { Element } from 'react-scroll';
 import { db } from '../firebase';
 
 function Projects() {
@@ -101,31 +102,33 @@ function Projects() {
                   <img src={language.url} alt={language.name} />
                ))}
             </div>
-            <div className="projects-list-container">
-               <div className="header">- Projects</div>
-               <div className="title">selected projects.</div>
-               <div className="body">
-                  lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus dolorum laborum vel assumenda quia commodi officia
-                  illo facilis, corrupti blanditiis voluptas maiores amet?
-                  Voluptates perferendis maiores itaque quos eius ex.
+            <Element name={'projects'}>
+               <div className="projects-list-container">
+                  <div className="header">- Projects</div>
+                  <div className="title">selected projects.</div>
+                  <div className="body">
+                     lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Ducimus dolorum laborum vel assumenda quia commodi officia
+                     illo facilis, corrupti blanditiis voluptas maiores amet?
+                     Voluptates perferendis maiores itaque quos eius ex.
+                  </div>
+                  <div className="button">
+                     <a href="mailto:adnanhakim007@gmail.com">explore more.</a>
+                  </div>
+                  <div className="projects-list">
+                     {projects.map((project) => (
+                        <Project
+                           title={project.title}
+                           language={project.language}
+                           image={project.url}
+                           details={project.details}
+                           link={project.link}
+                           css={project.css}
+                        />
+                     ))}
+                  </div>
                </div>
-               <div className="button">
-                  <a href="mailto:adnanhakim007@gmail.com">explore more.</a>
-               </div>
-               <div className="projects-list">
-                  {projects.map((project) => (
-                     <Project
-                        title={project.title}
-                        language={project.language}
-                        image={project.url}
-                        details={project.details}
-                        link={project.link}
-                        css={project.css}
-                     />
-                  ))}
-               </div>
-            </div>
+            </Element>
          </div>
       </div>
    );
