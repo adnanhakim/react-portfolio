@@ -1,6 +1,6 @@
 .navbar-container {
    background-color: var(--primary);
-   height: 100px;
+   height: 80px;
    position: sticky;
    top: 0;
    left: 0;
@@ -22,7 +22,7 @@
    width: 40%;
    display: flex;
    justify-content: space-between;
-   font-size: 1.475rem;
+   font-size: 1.275rem;
    color: var(--text);
 }
 

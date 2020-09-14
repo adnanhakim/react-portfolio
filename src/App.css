@@ -65,4 +65,8 @@ body {
    .body {
       font-size: 0.75rem;
    }
+
+   .button {
+      font-size: 1rem;
+   }
 }

@@ -1,12 +1,12 @@
 .footer-container {
    background-color: var(--secondary);
-   min-height: calc(100vh - 100px);
+   min-height: calc(100vh - 80px);
    padding: 0px 50px;
 }
 
 .footer {
    max-width: 1100px;
-   min-height: calc(100vh - 100px);
+   min-height: calc(100vh - 80px);
    margin: auto;
    background-color: var(--secondary);
    display: flex;
@@ -92,4 +92,65 @@
 
 .footer-link {
    cursor: pointer !important;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+   .footer-container {
+      padding: 0px 30px;
+   }
+
+   .footer-top {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+   }
+
+   .footer-left {
+      order: 2;
+      padding-right: 0rem;
+      padding-bottom: 2rem;
+   }
+
+   .footer-left > .button {
+      margin: 3rem 0px 2rem 0px;
+   }
+
+   .footer-left > .button > a {
+      text-decoration: underline;
+   }
+
+   .footer-right {
+      order: 1;
+      padding-left: 0rem;
+      padding-bottom: 2rem;
+   }
+
+   .achievements-container {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .achievements-container div:first-child {
+      padding-top: 0px;
+   }
+
+   .achievements-container div:last-child {
+      border-bottom: none !important;
+   }
+
+   .achievement {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0px;
+      border-bottom: 1px solid #979aa3;
+   }
+
+   /* .achievement-name {
+      margin-right: 1rem;
+   } */
+
+   .footer-bottom {
+      padding-bottom: 2rem;
+   }
 }

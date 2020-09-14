@@ -1,7 +1,6 @@
 .project-container {
    background-color: var(--secondary);
    width: 100%;
-   margin-bottom: 3rem;
    margin: 0rem auto 5rem auto;
    display: inline-block;
    height: 600px;
@@ -51,4 +50,33 @@
    width: 150%;
    height: auto;
    transform: translateX(-10%) rotate(-20deg);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+   .project-container {
+      margin: 0rem auto 2rem auto;
+      height: 500px;
+   }
+
+   .project-title {
+      font-size: 1.275rem;
+   }
+
+   .project-language {
+      font-size: 0.75rem;
+   }
+
+   .project-button {
+      font-size: 1rem;
+      margin: 2rem 2rem 2rem 1rem;
+   }
+
+   .phone {
+      top: 8rem;
+   }
+
+   .web {
+      top: 12rem;
+   }
 }
