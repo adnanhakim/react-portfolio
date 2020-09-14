@@ -51,13 +51,6 @@ function Footer({ resume }) {
                         got a project? <br />
                         let's talk.
                      </div>
-                     <div className="body">
-                        lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ducimus dolorum laborum vel assumenda quia commodi
-                        officia illo facilis, corrupti blanditiis voluptas
-                        maiores amet? Voluptates perferendis maiores itaque quos
-                        eius ex.
-                     </div>
                      <div className="button">
                         <a href="mailto:adnanhakim007@gmail.com">
                            send an email.

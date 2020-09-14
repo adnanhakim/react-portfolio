@@ -67,6 +67,7 @@
    }
 
    .languages img {
+      margin: 0.75rem;
       max-height: 25px;
       max-width: 75px;
    }

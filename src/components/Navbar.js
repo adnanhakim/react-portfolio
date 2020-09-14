@@ -3,11 +3,34 @@ import './Navbar.css';
 import { animateScroll, scroller } from 'react-scroll';
 
 function Navbar() {
+   const toggleNavbar = () => {
+      document.getElementById('navbar-links').classList.toggle('navbar-active');
+      document.getElementById('hamburger').classList.toggle('toggle');
+   };
+
+   const closeNavbar = () => {
+      if (
+         document
+            .getElementById('navbar-links')
+            .classList.contains('navbar-active')
+      ) {
+         document
+            .getElementById('navbar-links')
+            .classList.remove('navbar-active');
+         document.getElementById('hamburger').classList.toggle('toggle');
+      }
+   };
+
    return (
       <div className="navbar-container">
          <div className="navbar">
             <div className="navbar-logo"></div>
-            <ul className="navbar-links">
+            <div id="hamburger" className="hamburger" onClick={toggleNavbar}>
+               <div className="line1"></div>
+               <div className="line2"></div>
+               <div className="line3"></div>
+            </div>
+            <ul id="navbar-links" className="navbar-links">
                <li
                   id="home-link"
                   onClick={() => {
@@ -15,6 +38,7 @@ function Navbar() {
                         duration: 1500,
                         smooth: true,
                      });
+                     closeNavbar();
                   }}>
                   Home
                </li>
@@ -24,8 +48,9 @@ function Navbar() {
                      scroller.scrollTo('projects', {
                         duration: 1500,
                         smooth: true,
-                        offset: -150,
+                        offset: -100,
                      });
+                     closeNavbar();
                   }}>
                   Projects
                </li>
@@ -36,6 +61,7 @@ function Navbar() {
                         duration: 1500,
                         smooth: true,
                      });
+                     closeNavbar();
                   }}>
                   Contact
                </li>

@@ -5,6 +5,10 @@
    font-family: 'Poppins', sans-serif;
 }
 
+html {
+   overflow-x: hidden;
+}
+
 body {
    --primary: #333647;
    --secondary: #252734;
@@ -16,6 +20,7 @@ body {
    background-color: var(--secondary);
    color: var(--text);
    text-transform: lowercase;
+   overflow-x: hidden;
 }
 
 .header {
