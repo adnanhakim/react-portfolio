@@ -33,3 +33,10 @@
    align-items: center;
    cursor: pointer;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+   .navbar-links {
+      width: 100%;
+   }
+}
