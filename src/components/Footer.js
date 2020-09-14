@@ -66,14 +66,20 @@ function Footer({ resume }) {
                   </div>
                   <div className="footer-right">
                      <div className="header">- achievements</div>
-                     <div className="title">some of my achievements</div>
+                     <div className="title">some of my achievements.</div>
                      <div className="achievements-container">
                         {achievements.map((achievement) => (
                            <div key={achievement.key} className="achievement">
                               <div className="achievement-name">
                                  {achievement.name}
                               </div>
-                              <ArrowRightAltIcon className="button" />
+                              <a
+                                 href={achievement.link}
+                                 title="Check it out"
+                                 target="_blank"
+                                 rel="noopener noreferrer">
+                                 <ArrowRightAltIcon className="button" />
+                              </a>
                            </div>
                         ))}
                      </div>

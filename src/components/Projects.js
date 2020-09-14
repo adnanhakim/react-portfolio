@@ -8,7 +8,7 @@ import DesktopMacIcon from '@material-ui/icons/DesktopMac';
 import { Element } from 'react-scroll';
 import { db } from '../firebase';
 
-function Projects() {
+function Projects({ projectBody }) {
    const [languages, setLanguages] = useState([]);
    const [projects, setProjects] = useState([]);
 
@@ -85,7 +85,7 @@ function Projects() {
          <div className="skills">
             <Skill
                Icon={AndroidIcon}
-               title="android developer."
+               title="mobile app developer."
                className="skill"
             />
             <Skill Icon={WebIcon} title="ui/ux designer." className="skill" />
@@ -110,14 +110,15 @@ function Projects() {
                <div className="projects-list-container section">
                   <div className="header">- Projects</div>
                   <div className="title">selected projects.</div>
-                  <div className="body">
-                     lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Ducimus dolorum laborum vel assumenda quia commodi officia
-                     illo facilis, corrupti blanditiis voluptas maiores amet?
-                     Voluptates perferendis maiores itaque quos eius ex.
-                  </div>
+                  <div className="body">{projectBody}</div>
                   <div className="button">
-                     <a href="mailto:adnanhakim007@gmail.com">explore more.</a>
+                     <a
+                        href="https://github.com/adnanhakim"
+                        title="Explore more projects on GitHub"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        explore more.
+                     </a>
                   </div>
                   <div className="projects-list">
                      {projects.map((project) => (

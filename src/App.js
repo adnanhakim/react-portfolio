@@ -29,6 +29,7 @@ function App() {
                homeBody: data.homeBody,
                image: data.image,
                quote: data.quote,
+               projectBody: data.projectBody,
                resume: data.resume,
             });
          }
@@ -52,7 +53,7 @@ function App() {
             image={info.image}
          />
          <Contact quote={info.quote} />
-         <Projects />
+         <Projects projectBody={info.projectBody} />
          <Footer resume={info.resume} />
       </div>
    );
