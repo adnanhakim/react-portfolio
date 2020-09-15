@@ -17,12 +17,24 @@ function Project({ key, title, language, image, link, details, css }) {
                <div className="project-title">{title}.</div>
                <div className="project-language">{language}.</div>
             </div>
-            <div className="project-button">visit.</div>
+            <a
+               href={link}
+               title="View Project"
+               target="_blank"
+               rel="noopener noreferrer">
+               <div className="project-button">visit.</div>
+            </a>
          </div>
          <img src={image} alt="" className={css} />
          <div className={classes}>
             <div className="project-body">{details}</div>
-            <div className="project-button">visit.</div>
+            <a
+               href={link}
+               title="View Project"
+               target="_blank"
+               rel="noopener noreferrer">
+               <div className="project-button">visit.</div>
+            </a>
          </div>
       </div>
    );
