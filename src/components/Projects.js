@@ -67,6 +67,7 @@ function Projects({ projectBody }) {
                      language: data.language,
                      url: data.url,
                      css: data.css,
+                     buttonText: data.buttonText,
                   });
                }
             });
@@ -85,7 +86,7 @@ function Projects({ projectBody }) {
          <div className="skills">
             <Skill
                Icon={AndroidIcon}
-               title="mobile app developer."
+               title="mobile developer."
                className="skill"
             />
             <Skill Icon={WebIcon} title="ui/ux designer." className="skill" />
@@ -130,6 +131,7 @@ function Projects({ projectBody }) {
                            details={project.details}
                            link={project.link}
                            css={project.css}
+                           buttonText={project.buttonText}
                         />
                      ))}
                   </div>

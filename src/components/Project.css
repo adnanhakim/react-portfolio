@@ -55,6 +55,7 @@
    margin: 2rem;
    text-decoration: underline;
    cursor: pointer;
+   text-transform: lowercase;
 }
 
 .show-button {

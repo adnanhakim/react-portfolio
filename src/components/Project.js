@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import './Project.css';
+import DOMPurify from 'dompurify';
 
-function Project({ title, language, image, link, details, css }) {
+function Project({ title, language, image, link, details, css, buttonText }) {
    const [viewDetails, setViewDetails] = useState(false);
+
+   function createMarkup(html) {
+      return {
+         __html: DOMPurify.sanitize(html),
+      };
+   }
 
    function openFrontLink(e) {
       e.stopPropagation();
@@ -30,19 +37,21 @@ function Project({ title, language, image, link, details, css }) {
                className={`project-button ${!viewDetails && 'show-button'}`}
                title="View Project"
                onClick={(e) => openFrontLink(e)}>
-               visit.
+               view.
             </button>
          </div>
 
          <img src={image} alt="" className={css} />
 
          <div className={`project-back ${viewDetails ? 'view-details' : ''}`}>
-            <div className="project-body">{details}</div>
+            <p
+               className="project-body"
+               dangerouslySetInnerHTML={createMarkup(details)}></p>
             <button
                className={`project-button ${viewDetails && 'show-button'}`}
                title="View Project"
                onClick={(e) => openBackLink(e)}>
-               visit.
+               {buttonText}.
             </button>
          </div>
       </div>
