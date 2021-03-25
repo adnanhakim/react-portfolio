@@ -38,6 +38,11 @@
    font-weight: 600;
 }
 
+.home-left-name > h2 {
+   font-size: 5rem;
+   font-family: 'Poppins', sans-serif !important;
+}
+
 .home-left-last-name {
    margin-top: -36px;
 }

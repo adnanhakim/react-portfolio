@@ -1,5 +1,6 @@
 .project-container {
-   background-color: var(--primary);
+   /* background-color: var(--primary); */
+   background-color: lightcoral;
    width: 100%;
    margin: 0rem auto 5rem auto;
    display: inline-block;
@@ -10,12 +11,18 @@
 }
 
 .project-front {
-   position: absolute;
+   position: relative;
    background-color: var(--secondary);
    width: 100%;
    height: 100%;
+   opacity: 1;
    display: flex;
    justify-content: space-between;
+   align-items: flex-start;
+   -webkit-transition: opacity 0.5s ease-in-out;
+   -moz-transition: opacity 0.5s ease-in-out;
+   -o-transition: opacity 0.5s ease-in-out;
+   transition: opacity 0.5s ease-in-out;
 }
 
 .project-title {
@@ -38,11 +45,20 @@
 }
 
 .project-button {
+   padding: 0;
+   z-index: -1;
+   background: inherit;
+   border: none;
+   outline: none;
    font-size: 1.125rem;
    color: var(--accent);
    margin: 2rem;
    text-decoration: underline;
    cursor: pointer;
+}
+
+.show-button {
+   z-index: 10;
 }
 
 .phone {
@@ -51,6 +67,7 @@
    width: 80%;
    height: auto;
    transform: translateX(30%) rotate(-20deg);
+   pointer-events: none;
 }
 
 .web {
@@ -59,21 +76,31 @@
    width: 150%;
    height: auto;
    transform: translateX(-10%) rotate(-20deg);
+   pointer-events: none;
 }
 
 .project-back {
    position: absolute;
-   top: 100%;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   opacity: 0;
+   z-index: 2;
    background-color: var(--secondary);
    width: 100%;
    height: 100%;
    display: flex;
    flex-direction: column;
-   transition: all 0.5s ease-in;
+   align-items: flex-start;
+   -webkit-transition: opacity 0.5s ease-in-out;
+   -moz-transition: opacity 0.5s ease-in-out;
+   -o-transition: opacity 0.5s ease-in-out;
+   transition: opacity 0.5s ease-in-out;
 }
 
 .view-details {
-   top: 0;
+   opacity: 1;
 }
 
 /* Media Queries */

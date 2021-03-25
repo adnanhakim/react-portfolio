@@ -10,8 +10,8 @@ function Home({ homeTitle, homeBody, image }) {
          <div className="home">
             <div className="home-left">
                <div className="home-left-name">
-                  <div className="home-left-first-name">adnan</div>
-                  <div className="home-left-last-name">hakim.</div>
+                  <h2 className="home-left-first-name">adnan</h2>
+                  <h2 className="home-left-last-name">hakim.</h2>
                   <div className="home-left-line"></div>
                </div>
                <div className="home-left-links">
@@ -40,9 +40,9 @@ function Home({ homeTitle, homeBody, image }) {
                <img src={image} alt="" />
             </div>
             <div className="home-right">
-               <div className="header">- introduction</div>
-               <div className="title">{homeTitle}</div>
-               <div className="body">{homeBody}</div>
+               <p className="header">- introduction</p>
+               <h3 className="title">{homeTitle}</h3>
+               <p className="body">{homeBody}</p>
             </div>
          </div>
       </div>
